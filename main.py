@@ -310,7 +310,7 @@ import json
 import time
 from functools import lru_cache
 
-GOOGLE_API_KEY = "AIzaSyDcbQdSy9bJPSTNkmf1YiRRzYE_mm0y43U"
+
 
 
 @lru_cache(maxsize=1000)
@@ -322,7 +322,7 @@ def get_anime_keywords_cached(anime_name: str) -> dict:
             temperature=1.0,
             top_p=0.95,
         )
-        client = genai.Client(api_key="AIzaSyDcbQdSy9bJPSTNkmf1YiRRzYE_mm0y43U")
+        client = genai.Client(api_key="API_KEY")
 
         prompt = f"""
         Write 4 key words for and their japanese and romaji translations '{anime_name}' anime. 
