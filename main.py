@@ -147,7 +147,7 @@ def trivia():
         "ancient philosophy myths",
 
         "movie myths",
-        "anime"
+        "anime",
         "anime misconceptions",
         "anime characters"
         "video game myths",
