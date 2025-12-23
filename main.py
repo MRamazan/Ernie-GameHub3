@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory,render_template
 from flask_cors import CORS
 from gradio_client import Client
 import os
@@ -6,8 +6,7 @@ import random
 import re
 import json
 
-app = Flask(__name__, static_folder='static', static_url_path='')
-app.secret_key = '1903bjk'
+app = Flask(__name__)
 
 CORS(app)
 
@@ -36,7 +35,7 @@ def board_full(board):
 @app.route('/')
 def index():
     try:
-        return send_from_directory('static', 'index.html')
+        return render_template('index.html')
     except Exception as e:
         return f"Error loading index.html: {str(e)}", 500
 
