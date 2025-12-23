@@ -153,7 +153,7 @@ def trivia():
         "movie myths",
         "anime",
         "anime misconceptions",
-        "anime characters"
+        "anime characters",
         "video game myths",
         "famous quote misattributions",
         "pop culture false beliefs",
