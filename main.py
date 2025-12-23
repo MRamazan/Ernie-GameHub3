@@ -6,7 +6,7 @@ import random
 
 
 app = Flask(__name__, static_folder='static')
-app.secret_key = '1903bjk'
+
 
 CORS(app)
 
