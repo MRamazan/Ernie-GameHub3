@@ -354,4 +354,4 @@ def clear_roleplay():
 if __name__ == "__main__":
 
     print(f"Starting server on port {port}")
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(debug=False, host='0.0.0.0', port=5000)
