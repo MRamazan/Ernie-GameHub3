@@ -3,12 +3,11 @@ from flask_cors import CORS
 from gradio_client import Client
 import os
 import random
-from flask_socketio import SocketIO
 
 
 app = Flask(__name__, static_folder='static')
 app.secret_key = '1903bjk'
-socketio = SocketIO(app, cors_allowed_origins="*")
+
 CORS(app)
 
 client = Client("https://baidu-simple-ernie-bot-demo.hf.space/")
