@@ -6,7 +6,7 @@ import random
 import re
 import json
 
-app = Flask(__name__, static_folder='.')
+app = Flask(__name__, static_folder='static', static_url_path='')
 app.secret_key = '1903bjk'
 
 CORS(app)
@@ -36,7 +36,7 @@ def board_full(board):
 @app.route('/')
 def index():
     try:
-        return send_from_directory('.', 'index.html')
+        return send_from_directory('static', 'index.html')
     except Exception as e:
         return f"Error loading index.html: {str(e)}", 500
 
