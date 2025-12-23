@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory,render_template
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from gradio_client import Client
 import os
@@ -7,6 +7,7 @@ import re
 import json
 
 app = Flask(__name__)
+app.secret_key = '1903bjk'
 
 CORS(app)
 
@@ -352,6 +353,6 @@ def clear_roleplay():
 
 
 if __name__ == "__main__":
-
+    port = int(os.environ.get("PORT", 8080))
     print(f"Starting server on port {port}")
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(host="0.0.0.0", port=port, debug=False)
